@@ -1,10 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
+import React from "react";
+import { Htag } from "./components/index";
 
-export default function Home() {
+
+export default function Home(): JSX.Element {
   return (
     <div>
-     XCV
+      <Htag tag='h1'>Текст</Htag>
     </div>
   );
 }
