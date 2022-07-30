@@ -1,4 +1,4 @@
 import { DetailedHTMLProps,HTMLAttributes, ReactNode } from "react";
 
-export interface SidebarProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>   {}
+export interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>   {}
 
