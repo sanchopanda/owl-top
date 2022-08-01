@@ -25,11 +25,7 @@ function Home({ menu }: HomeProps): JSX.Element {
         веб-дизайнерами уровня middle.
       </Paragraph>
       <Tag color="red">средний</Tag>
-      <Rating isEditable={true} rating={rating} setRating={setRating}></Rating>
-      <ul>
-      {menu.map(m => (<li key={m._id.secondCategory}>{m._id.secondCategory}</li>))}
-      </ul>
-      
+      <Rating isEditable={true} rating={rating} setRating={setRating}></Rating>     
     </>
   );
 }
