@@ -39,7 +39,15 @@
     border-left: 1px solid var(--gray-light);
 }
 
-.secondBlockOpened:last-child {
+.secondLevelBlock {
+    display: none;
+}
+
+.secondLevelBlockOpened {
+    display: block;
+}
+
+.secondLevelBlockOpened:last-child {
     margin-bottom: 20px;
 }
 
