@@ -9,7 +9,7 @@ import { ProductModel } from "../../interfaces/product.interface";
 import { firstLevelMenu } from "../../helpers/helpers";
 import { TopPageComponent } from "../../page-components/index";
 
-function TopPage({ firstCategory, page, products }: CourseProps): JSX.Element {
+function TopPage({ firstCategory, page, products }: TopPageProps ): JSX.Element {
   return <TopPageComponent firstCategory={firstCategory} page={page} products={products}/>;
 }
 
@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<CourseProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
+export const getStaticProps: GetStaticProps<TopPageProps > = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
   if (!params) {
     return {
       notFound: true,

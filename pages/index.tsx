@@ -7,7 +7,6 @@ import { MenuItem } from '../interfaces/menu.interface';
 
 function Home({ menu }: HomeProps): JSX.Element {
   const [rating, setRating] = useState<number>(4);
-  console.log(1);
   return (
     <>
       <Htag tag="h1">Заголовок</Htag>
