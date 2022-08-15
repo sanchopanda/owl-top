@@ -5,6 +5,7 @@ import { Htag, Tag, HhData, Advantages, Paragraph } from "../../components/index
 import { TopLevelCategory } from "../../interfaces/page.interface";
 
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps): JSX.Element => {
+  if(!page) console.log('ERROR ERROR ERROR')
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -28,7 +29,7 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
         <Htag tag='h2'>Преимущества</Htag>
         <Advantages advantages={page.advantages}/>
       </>}
-      {page.seoText && <Paragraph>{page.seoText}</Paragraph>}
+      {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page.seoText}}></div>}
       <Htag tag='h2'>Получаемые навыки</Htag>
       {page.tags.map(t => <Tag key={t} color='primary'>{t}</Tag>)}
     </div>
