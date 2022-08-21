@@ -6,3 +6,4 @@ export { Rating } from './Rating/Rating';
 export { Card } from './Card/Card';
 export { HhData } from './HhData/HhData';
 export { Advantages } from './Advantages/Advantages';
+export { Sort } from './Sort/Sort';
