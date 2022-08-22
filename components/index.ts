@@ -7,3 +7,5 @@ export { Card } from './Card/Card';
 export { HhData } from './HhData/HhData';
 export { Advantages } from './Advantages/Advantages';
 export { Sort } from './Sort/Sort';
+export { Input } from './Input/Input';
+export { Textarea } from './Textarea/Textarea';
