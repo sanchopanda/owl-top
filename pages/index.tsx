@@ -23,7 +23,7 @@ function Home({ menu }: HomeProps): JSX.Element {
       <Tag color="red">средний</Tag>
       <Rating isEditable={true} rating={rating} setRating={setRating}></Rating>
       <Input placeholder="test" />
-      <Textarea placeholder="test"/>
+      <Textarea placeholder="test"/>      
     </>
   );
 }
