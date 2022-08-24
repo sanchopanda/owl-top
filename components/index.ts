@@ -10,3 +10,5 @@ export { Sort } from './Sort/Sort';
 export { Input } from './Input/Input';
 export { Textarea } from './Textarea/Textarea';
 export { Search } from './Search/Search';
+export { Product } from './Product/Product';
+export { Divider } from './Divider/Divider';
