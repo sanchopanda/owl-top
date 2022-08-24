@@ -26,7 +26,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
         )}
       </div>
       <div className={styles.credit}>
-        {priceRu(product.credit)}/<span className={styles.month}>месяц</span>
+        {priceRu(product.credit)}/<span className={styles.month}>мес</span>
       </div>
       <div className={styles.rating}>
         <Rating rating={product.reviewAvg ?? product.initialRating} />
@@ -70,8 +70,8 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
           </div>
         )}
       </div>
-      <div className={styles.hr}>
-        <Divider className={styles.hr} />
+      <div className={cn(styles.hr, styles.hr2)}>
+        <Divider className={cn(styles.hr)} />
       </div>
       <div className={styles.actions}>
         <Button appearence="primary">Узнать подробнее</Button>
