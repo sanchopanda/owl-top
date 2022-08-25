@@ -12,3 +12,5 @@ export { Textarea } from './Textarea/Textarea';
 export { Search } from './Search/Search';
 export { Product } from './Product/Product';
 export { Divider } from './Divider/Divider';
+export { Review } from './Review/Review';
+export { ReviewForm } from './ReviewForm/ReviewForm';
