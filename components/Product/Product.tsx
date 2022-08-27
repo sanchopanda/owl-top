@@ -4,13 +4,14 @@ import cn from "classnames";
 import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from "../index";
 import { devclOfNum, priceRu } from "../../helpers/helpers";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { ForwardedRef, forwardRef, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
-export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
+export const Product = motion(forwardRef(({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
   const reviewRef = useRef<HTMLDivElement>(null);
 
-  const scrollToReview = () => {  
+  const scrollToReview = () => {
     setIsReviewOpened(true);
     reviewRef.current?.scrollIntoView({
       behavior: "smooth",
@@ -19,7 +20,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
   };
 
   return (
-    <div className={cn(className)} {...props}>
+    <div className={cn(className)} {...props} ref={ref}>
       <Card className={styles.product}>
         <div className={styles.logo}>
           <Image src={process.env.NEXT_PUBLIC_DOMAIN + product.image} width={70} height={70} alt={product.title} />
@@ -117,4 +118,4 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
       )}
     </div>
   );
-};
+}));
