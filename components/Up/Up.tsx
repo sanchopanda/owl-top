@@ -3,6 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./Up.module.css";
 import UpIcon from "./up.svg";
 import { useEffect } from "react";
+import { ButtonIcon } from "../ButtonIcon/ButtonIcon";
 
 export const Up = (): JSX.Element => {
   const controls = useAnimation();
@@ -10,7 +11,7 @@ export const Up = (): JSX.Element => {
   const y = useScrollY();
 
   useEffect(() => {
-    controls.start({ opacity: y / document.body.scrollHeight });
+    controls.start({ opacity: y / document.body.scrollHeight * 2 });
   }, [y, controls]);
 
   const scrollToTop = () => {
@@ -21,8 +22,8 @@ export const Up = (): JSX.Element => {
   };
 
   return (
-    <motion.button className={styles.up} onClick={scrollToTop} animate={controls} initial={{ opacity: 0 }}>
-      <UpIcon />
-    </motion.button>
+    <motion.div className={styles.up} animate={controls} initial={{ opacity: 0 }}>
+      <ButtonIcon appearence="primary" icon="up" onClick={scrollToTop} />
+    </motion.div>
   );
 };
