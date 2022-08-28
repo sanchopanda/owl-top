@@ -28,8 +28,8 @@
   text-transform: uppercase;
   color: var(--gray-dark);
   font-size: 12px;
-  line-height: 16px;
   font-weight: 300;
+  outline-offset: -1px;
 }
 
 .secondLevelBlock {
@@ -53,10 +53,11 @@
   cursor: pointer;
   color: var(--gray-dark);
   font-size: 14px;
-  line-height: 19px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+
+  outline-offset: -1px;
 }
 
 .thirdLevelActive,
