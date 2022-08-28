@@ -5,31 +5,13 @@ import { Button, Htag, Input, Paragraph, Rating, Tag, Textarea } from "../compon
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
 import { API } from "../helpers/api";
+import { Home } from "../page-components/Home/Home";
 
-function Home({ menu }: HomeProps): JSX.Element {
-  const [rating, setRating] = useState<number>(4);
-  return (
-    <>
-      <Htag tag="h1">Заголовок</Htag>
-      <Button appearence="primary" arrow="right">
-        Кнопка
-      </Button>
-      <Button appearence="ghost" arrow="right" className="hi">
-        Кнопка-1
-      </Button>
-      <Paragraph className="hi">
-        Студенты освоят не только hard skills, необходимые для работы веб-дизайнером, но и soft skills — навыки, которые позволят эффективно взаимодействовать в
-        команде с менеджерами, разработчиками и маркетологами. Выпускники факультета могут успешно конкурировать с веб-дизайнерами уровня middle.
-      </Paragraph>
-      <Tag color="red">средний</Tag>
-      <Rating isEditable={true} rating={rating} setRating={setRating}></Rating>
-      <Input placeholder="test" />
-      <Textarea placeholder="test"/>      
-    </>
-  );
+function HomePage({ menu }: HomeProps): JSX.Element {
+	return <Home />;
 }
 
-export default withLayout(Home);
+export default withLayout(HomePage);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const firstCategory = 0;
