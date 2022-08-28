@@ -9,7 +9,7 @@ export const ButtonIcon = ({ appearence, icon, className, ...props }: ButtonIcon
     <button
       className={cn(styles.button, className, {
         [styles.primary]: appearence == "primary",
-        [styles.ghost]: appearence == "white",
+        [styles.white]: appearence == "white",
       })}
       {...props}
     >
