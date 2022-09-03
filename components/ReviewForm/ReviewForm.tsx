@@ -79,7 +79,7 @@ export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewF
        {error && (
         <div className={styles.error}>
           Что-то пошло не так, попробуйте обновить страницу.
-          <CloseIcon className={styles.close} onClick={() => setError()}/>
+          <CloseIcon className={styles.close} onClick={() => setError(undefined)}/>
         </div>
       )}
     </form>
